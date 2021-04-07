@@ -20,6 +20,23 @@ if(coinsInPortfolio && coinsInPortfolio.length) {
 
 function addToUI(coins) {
 	// If this method is called, we have all the coin data and just need to render it
+	const el = document.getElementById('coins')
+	const p = document.createElement('p')
+	coins.forEach(coin => {
+		const c = document.createElement('div')
+
+		const h = document.createElement('h1')
+		h.appendChild(document.createTextNode(coin.symbol.toUpperCase()))
+		c.append(h)
+
+		const p = document.createElement('p')
+		p.appendChild(document.createTextNode(`${coin.amount} ${coin.symbol.toUpperCase()} = ${coin.amount * coin.current_price} ${currency.toUpperCase()} [${coin.price_change_percentage_24h}%]`))
+		c.append(p)
+
+		el.append(c)
+	})
+	el.className = el.className.replace(/\bhidden\b/g, '')
+	el.appendChild(p)
 }
 
 /*
