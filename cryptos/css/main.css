@@ -1,0 +1,38 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    background-color: #e0e0e0;
+}
+
+h1, p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#coins {
+    padding: 32px;
+    border-radius: 16px;
+
+    background-color: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+#coins > div:not(:first-of-type) {
+    margin-top: 16px;
+}
